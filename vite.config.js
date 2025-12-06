@@ -4,10 +4,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  server: {
-    open: true,
-  },
   build: {
-    outDir: 'dist', // مهم جداً للـ Vercel
+    target: "es2015",  // مهم جداً
+    outDir: "dist",
   },
+  base: "./",
 });
