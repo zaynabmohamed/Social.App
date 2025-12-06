@@ -35,7 +35,7 @@ if(isLoading){
    <>
   <CreatePost/>
    {data?.map((post)=>(
-          <Link  key={post.id}  to={`/postdetails/${post.id}`}>
+          <Link  to={`/postdetails/${post.id}`}>
  <div key={post.id} className='w-full md:w-[80%] lg:w-[60%] rounded-md bg-blue-100 mx-auto p-4 mb-5 mt-[30px] '>
     <div className='flex justify-between items-center mb-4'>
       <div className='flex items-center gap-4'>
