@@ -1,4 +1,3 @@
-import React, { useContext, useEffect, useState } from 'react'
 import { PostContext } from '../Context/PostContext'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
@@ -12,6 +11,7 @@ import { QueryClient, useQueryClient } from '@tanstack/react-query';
 export default function Home(){
   const QueryClient = useQueryClient()
      async function getAllPosts(){
+      
         return await axios.get(`https://linked-posts.routemisr.com/posts?limit=50` , {
           headers:{
             token:localStorage.getItem("useToken")
