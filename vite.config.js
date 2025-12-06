@@ -8,5 +8,5 @@ export default defineConfig({
     target: "es2015",  // مهم جداً
     outDir: "dist",
   },
-  base: "./",
+  base: "/",
 });
