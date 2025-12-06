@@ -21,7 +21,7 @@ function App() {
   const router = createBrowserRouter([
     {path:"" , element:<Layout/> 
        , children:[
-      {index:true , element: <Home/>},
+      {index:true , element:  <ProtectedRoute><Home/></ProtectedRoute>},
       {path:"/profile" , element: <ProtectedRoute><Profile/></ProtectedRoute>},
       {path:"/postdetails/:id" , element: <ProtectedRoute><PostDetails/></ProtectedRoute>},
       {path: "/login" , element:<Login/>},
