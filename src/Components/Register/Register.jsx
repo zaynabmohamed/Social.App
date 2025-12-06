@@ -1,14 +1,12 @@
-import { Button, form, Input, Link, Select, SelectItem } from "@heroui/react";
+import { Button, Input, Link, Select, SelectItem } from "@heroui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 import * as z from "zod";
-import { LuLoaderCircle } from "react-icons/lu";
 export default function RegisterPage() {
  const [apiErro , setApiErro]=useState("")
- const [ isLoading , setIsLoading] = useState(false)
 
   const navigate = useNavigate()
   const schema= z.object({
@@ -69,7 +67,6 @@ export default function RegisterPage() {
               </Button>
             </>
            {apiErro == "user already exists." ? <Link href="./login" className='underline cursor-pointer'>Login</Link> : ""}
-
           </div>
         </form>
       </div>

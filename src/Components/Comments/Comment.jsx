@@ -10,6 +10,7 @@ export default function Comment({ comment}) {
   console.log(comment)
   return (
     <>
+    
       <div className="w-full rounded-md border-2 border-slate-900 bg-slate-800 text-white">
         <div className="flex justify-between">
           <div className="left flex gap-2 items-center">

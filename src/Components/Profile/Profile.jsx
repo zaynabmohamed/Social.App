@@ -1,18 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
-import React from 'react'
 import UserPosts from '../UserPosts/UserPosts'
-import { Button } from '@heroui/react'
 import ChangePassword from '../ChangePasswordModal/ChangePassword'
 import UploadProfile from '../UploadProfile/UploadProfile'
-import PostDetails from '../PostDetails/PostDetails'
-import { useParams } from 'react-router-dom'
-import UpdataComment from '../UpdataComment/UpdataComment'
-import CreateCommentModal from '../CreateCommentModal/CreateCommentModal'
-import Home from '../Home/Home'
+
 export default function ProfilePage() {
-//  const { id } = useParams(); 
-//   console.log("Post ID:", id);
    async function getUserData(){
     return await axios.get(`https://linked-posts.routemisr.com/users/profile-data` , {
      headers:{
@@ -20,7 +12,7 @@ export default function ProfilePage() {
      }
     })
   }
- const {data , isError , isLoading , error  } = useQuery({
+ const {data } = useQuery({
      queryKey:["userData"],
      queryFn:getUserData,
      select:(data)=>data?.data?.user

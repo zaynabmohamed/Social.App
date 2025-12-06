@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button, Avatar} from "@heroui/react";
 import { MdOutlineLightMode , MdOutlineDarkMode } from "react-icons/md";
 import { UserContext } from '../Context/UserContext'
-import { useNavigate } from 'react-router';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 export const AcmeLogo = () => {
@@ -20,7 +19,6 @@ export const AcmeLogo = () => {
 };
 
 export default function NavbarPage() {
-const navigate = useNavigate()
   const { userLogin, SetUserLogin} = useContext(UserContext)
    
    function signOut(){

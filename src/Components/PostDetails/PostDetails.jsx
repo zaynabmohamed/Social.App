@@ -11,6 +11,7 @@ import CreatePost from '../CreatePost/CreatePost';
 import CreateCommentModal from '../CreateCommentModal/CreateCommentModal';
 export default function PostDetails() {
  const { id } = useParams(); 
+
   console.log("Post ID:", id);
  async function getSinglePost(){
      return  await axios.get(`https://linked-posts.routemisr.com/posts/${id}`,{
@@ -18,6 +19,7 @@ export default function PostDetails() {
             token:localStorage.getItem("useToken")
         }
     })
+    
 }
    const {data, isLoading , isError , error  } =useQuery({
         queryKey:["getPosts"],
